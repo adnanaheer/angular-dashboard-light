@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { AppComponent } from './app.component';
 
@@ -38,8 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     LoginFormComponent,
     SignupFormComponent,
-    NavComponent,
-    HomeComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,
