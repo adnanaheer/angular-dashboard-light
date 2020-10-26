@@ -1,8 +1,6 @@
 <mat-toolbar color="primary" class="example-toolbar">
 
-  <button mat-icon-button (click)="isExpanded = !isExpanded">
-    <mat-icon>menu</mat-icon>
-  </button>
+
 
   <span fxLayoutAlign="center center">
     <img style="height: auto;width: 150px;" src="./assets/logo.png" alt="">
@@ -26,8 +24,13 @@
 
   <mat-sidenav #sidenav class="example-sidenav " mode="side" opened="true" (mouseenter)="mouseenter()"
     (mouseleave)="mouseleave()">
+    
 
     <mat-nav-list class="sidenav" >
+      <button mat-icon-button (click)="isExpanded = !isExpanded">
+        <mat-slide-toggle class="slitog">Slide me!</mat-slide-toggle>
+        <!-- <mat-icon>menu</mat-icon> -->
+      </button>
 
       <!-- <span fxLayout="row wrap" fxLayoutAlign="center center">
         <a mat-list-item href="...">

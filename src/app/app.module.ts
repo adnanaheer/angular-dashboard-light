@@ -27,7 +27,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -63,7 +63,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSlideToggleModule
 
   ],
 
