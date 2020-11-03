@@ -1,6 +1,7 @@
 <mat-toolbar color="primary" class="example-toolbar">
-
-
+  <button mat-icon-button (click)="isExpanded = !isExpanded">
+    <mat-icon>menu</mat-icon>
+  </button>
 
   <span fxLayoutAlign="center center">
     <img style="height: auto;width: 150px;" src="./assets/logo.png" alt="">
@@ -17,21 +18,12 @@
       <span routerLink="/signup" mat-menu-item>Sign Up</span>
     </mat-menu>
   </div>
-
 </mat-toolbar> 
 
 <mat-sidenav-container class="example-container " autosize>
-
   <mat-sidenav #sidenav class="example-sidenav " mode="side" opened="true" (mouseenter)="mouseenter()"
     (mouseleave)="mouseleave()">
-    
-
     <mat-nav-list class="sidenav" >
-      <button mat-icon-button (click)="isExpanded = !isExpanded">
-        <mat-slide-toggle class="slitog">Slide me!</mat-slide-toggle>
-        <!-- <mat-icon>menu</mat-icon> -->
-      </button>
-
       <!-- <span fxLayout="row wrap" fxLayoutAlign="center center">
         <a mat-list-item href="...">
         <img style="width: 50px;height: 50px;margin-top: 10px;margin-bottom: 15px;" src="./assets/baglogo.png" alt="">
@@ -39,7 +31,6 @@
           <img class="img" *ngIf="isExpanded || isShowing" src="./assets/shopping.png" alt="">
       </span> -->
       
-
       <!-- <div class="circular--landscape">
         <img src="../assets/login.logo.jpg" alt="photo">
       </div>
@@ -106,8 +97,6 @@
         </div>
 
       </div>
-
     </mat-nav-list>
-
   </mat-sidenav>
 </mat-sidenav-container>
