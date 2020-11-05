@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
-import { NavComponent } from './nav/nav.component'
+import { NavComponent } from './nav/nav.component';
+import { ChartComponent } from './chart/chart.component'
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {
-     path:'',
-     redirectTo:'login',
-     pathMatch:'full'
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
   },
   {
     path: 'login',
@@ -22,7 +24,12 @@ const routes: Routes = [
     path: 'signup',
     component: SignupFormComponent
   },
-  
+
+  {
+    path: 'chart',
+    component: ChartComponent
+  },
+
 ];
 
 @NgModule({
