@@ -7,8 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavComponent } from './nav/nav.component';
 import { AppComponent } from './app.component';
 import { NewChartComponent } from './new-chart/new-chart.component';
-import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { ChartSplineComponent } from './chart-spline/chart-spline.component';
+import { HomeComponent } from './home/home.component';
+import { TestdataComponent } from './testdata/testdata.component';
+import { DataComponent } from './data/data.component';
 import { ChartComponent } from './chart/chart.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,8 +36,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { HighchartsChartModule } from 'highcharts-angular';
-
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { HighchartsChartModule } from 'highcharts-angular';
     ChartComponent,
     ChartSplineComponent,
     NewChartComponent,
-    BarChartComponent
+    HomeComponent,
+    TestdataComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,
@@ -74,8 +77,9 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatPaginatorModule,
     HttpClientModule,
     MatSlideToggleModule,
-    HighchartsChartModule
-  
+    HighchartsChartModule,
+    MatDialogModule
+
   ],
 
   providers: [],

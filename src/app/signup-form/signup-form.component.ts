@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators,FormGroup,FormBuilder } from '@angular/forms';
+import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -15,12 +15,12 @@ export class SignupFormComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
 
-    this.SignupForm= this.fb.group({
+    this.SignupForm = this.fb.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
-      gender:['', Validators.required]
+      gender: ['', Validators.required]
 
     });
 
@@ -38,9 +38,8 @@ export class SignupFormComponent implements OnInit {
   }
 
   onSubmit() {
-     var res=this.SignupForm.value;
-     console.log(res);
-     alert(res);
+    var res = this.SignupForm.value;
+    console.log(res);
   }
 
 }

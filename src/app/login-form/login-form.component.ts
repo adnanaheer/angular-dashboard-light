@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { NewChartComponent } from '../new-chart/new-chart.component';
 
 @Component({
   selector: 'app-login-form',
@@ -8,20 +10,28 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginFormComponent implements OnInit {
 
+
+
+  fileNameDialogRef: MatDialogRef<NewChartComponent>;
+
   hide = true
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   LoginForm = new FormGroup({
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   });
 
+  openDialog() {
+    this.fileNameDialogRef = this.dialog.open(NewChartComponent);
+  }
+
   ngOnInit(): void {
   }
-  
+
   onSubmit() {
-    alert("Form validated and submitted successfully!");
+
   }
 
 }
