@@ -37,6 +37,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { MatAutocompleteModuleComponent } from './mat-autocomplete-module/mat-autocomplete-module.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     NewChartComponent,
     HomeComponent,
     TestdataComponent,
-    DataComponent
+    DataComponent,
+    DropdownComponent,
+    MatAutocompleteModuleComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +83,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     MatSlideToggleModule,
     HighchartsChartModule,
-    MatDialogModule
+    MatDialogModule,
+    MatAutocompleteModule
 
   ],
 
