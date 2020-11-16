@@ -10,14 +10,28 @@
   <span class="example-spacer"></span>
 
   <div fxLayoutAlign="space-between" fxLayoutGap="20px">
-    
-    <span fxHide.xs class="material-icons">search</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <span class="material-icons">account_circle</span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/signup">
+        <mat-icon>login</mat-icon> 
+        <span>Sign Up</span>
+      </button>
+
+      <button mat-menu-item routerLink="/login">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+
+    <!-- <span fxHide.xs class="material-icons">search</span>
     <span fxHide.xs class="material-icons">notifications</span>
-    <span class="material-icons" [matMenuTriggerFor]="menu">account_circle</span>
     <mat-menu #menu="matMenu">
       <span routerLink="/login" mat-menu-item>Logout</span>
       <span routerLink="/signup" mat-menu-item>Sign Up</span>
-    </mat-menu>
+    </mat-menu> -->
+
   </div>
 </mat-toolbar> 
 
