@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-html, body { height: 100%;background: whitesmoke; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 98vh;
+  background: whitesmoke;
+ }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+ }
 
 // Thin scrollbar in the app (currently supports webkit based browsers only)
 ::-webkit-scrollbar-track {
@@ -12,8 +18,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
   
   ::-webkit-scrollbar {
-    width: 3px;
+    width: 5px;
     background-color: #F5F5F5;
+    
   }
   
   ::-webkit-scrollbar-thumb {

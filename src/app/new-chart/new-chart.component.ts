@@ -15,17 +15,21 @@ export class NewChartComponent implements OnInit {
 
    title = 'myHighchart';
 
-   data = [{
-      name: 'ItSolutionStuff.com',
-      data: [300, 700, 555, 444, 777, 877, 944, 567, 666, 789, 456, 800]
-   }, {
-      name: 'Nicesnippets.com',
-      data: [200, 455, 677, 877, 455, 778, 888, 567, 785, 488, 567, 300]
-   }, {
-      name: 'Aheer.com',
-      data: [100, 1100, 200, 1000, 300, 900, 400, 800, 500, 700, 600, 1100]
-
-   }];
+   data = [
+      {
+         name: 'ItSolutionStuff.com',
+         data: [300, 700, 555, 444, 777, 877, 944, 567, 666, 789, 456, 800]
+      },
+      {
+         name: 'Nicesnippets.com',
+         data: [200, 455, 677, 877, 455, 778, 888, 567, 785, 488, 567, 300]
+      },
+      {
+         name: 'Aheer.com',
+         data: [100, 1100, 200, 1000, 300, 900, 400, 800, 500, 700, 600, 1100]
+      }
+      
+   ];
 
    highcharts = Highcharts;
    chartOptions = {
