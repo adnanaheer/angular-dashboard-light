@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NavComponent } from './nav/nav.component';
-import { ChartComponent } from './chart/chart.component'
+import { ChartComponent } from './chart/chart.component';
+import { HomeComponent } from './home/home.component'
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'chart',
     component: ChartComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
 
 ];
