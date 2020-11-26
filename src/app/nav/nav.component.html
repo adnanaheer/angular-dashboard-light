@@ -86,26 +86,28 @@
       </mat-list-item>
 
       <mat-list-item>
-        <mat-icon mat-list-icon>store</mat-icon>
-        <span class="full-width" *ngIf="isExpanded || isShowing">Store</span>
+        <mat-icon mat-list-icon>point_of_sale</mat-icon>
+        <span class="full-width" *ngIf="isExpanded || isShowing">Sales</span>
       </mat-list-item>
 
       <mat-list-item>
-        <mat-icon mat-list-icon>shopping_cart</mat-icon>
-        <span class="full-width" *ngIf="isExpanded || isShowing">Shopping</span>
+        <mat-icon mat-list-icon>list_alt</mat-icon>
+        <span class="full-width" *ngIf="isExpanded || isShowing">Orders</span>
       </mat-list-item>
 
       <mat-list-item>
-        <mat-icon mat-list-icon>receipt</mat-icon>
-        <span class="full-width" *ngIf="isExpanded || isShowing">Billing</span>
+        <mat-icon mat-list-icon>support_agent </mat-icon>
+        <span class="full-width" *ngIf="isExpanded || isShowing"
+          >Customers</span
+        >
       </mat-list-item>
 
       <mat-list-item>
-        <mat-icon mat-list-icon>settings</mat-icon>
-        <span class="full-width" *ngIf="isExpanded || isShowing">Settings</span>
+        <mat-icon mat-list-icon>category</mat-icon>
+        <span class="full-width" *ngIf="isExpanded || isShowing">Products</span>
       </mat-list-item>
 
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+      <!-- <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
         <span class="full-width" *ngIf="isExpanded || isShowing"
           >Parent Menu</span
         >
@@ -150,8 +152,8 @@
           <mat-list-item>SubSubmenu Item 1</mat-list-item>
           <mat-list-item>SubSubmenu Item 2</mat-list-item>
         </div>
-      </div>
+     </div> -->
     </mat-nav-list>
   </mat-sidenav>
-  <app-home></app-home>
+  <!-- <app-home></app-home> -->
 </mat-sidenav-container>
