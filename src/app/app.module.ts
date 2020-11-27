@@ -16,7 +16,7 @@ import { ChartComponent } from './chart/chart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -25,7 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -37,7 +37,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { MatAutocompleteModuleComponent } from './mat-autocomplete-module/mat-autocomplete-module.component';
 
@@ -54,7 +54,7 @@ import { MatAutocompleteModuleComponent } from './mat-autocomplete-module/mat-au
     TestdataComponent,
     DataComponent,
     DropdownComponent,
-    MatAutocompleteModuleComponent
+    MatAutocompleteModuleComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,11 +84,10 @@ import { MatAutocompleteModuleComponent } from './mat-autocomplete-module/mat-au
     MatSlideToggleModule,
     HighchartsChartModule,
     MatDialogModule,
-    MatAutocompleteModule
-
+    MatAutocompleteModule,
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

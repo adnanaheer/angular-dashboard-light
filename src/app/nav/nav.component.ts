@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 // import { MatSidenav } from '@angular/material';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
-
   @ViewChild('sidenav') sidenav: MatSidenavModule;
   isExpanded = true;
   showSubmenu: boolean = false;
@@ -28,6 +27,14 @@ export class NavComponent {
       this.isShowing = false;
     }
   }
-  
 
+  // isHandset$: Observable<boolean> = this.breakpointObserver
+  //   .observe(Breakpoints.Handset)
+  //   .pipe(
+  //     map((result) => result.matches),
+  //     shareReplay()
+  //   );
+  // menuItems = ['dashboard', 'sales', 'orders', 'customers', 'products'];
+
+  // constructor(private breakpointObserver: BreakpointObserver) {}
 }
