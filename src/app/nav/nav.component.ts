@@ -27,14 +27,4 @@ export class NavComponent {
       this.isShowing = false;
     }
   }
-
-  // isHandset$: Observable<boolean> = this.breakpointObserver
-  //   .observe(Breakpoints.Handset)
-  //   .pipe(
-  //     map((result) => result.matches),
-  //     shareReplay()
-  //   );
-  // menuItems = ['dashboard', 'sales', 'orders', 'customers', 'products'];
-
-  // constructor(private breakpointObserver: BreakpointObserver) {}
 }

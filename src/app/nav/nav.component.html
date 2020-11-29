@@ -78,34 +78,54 @@
         <span class="material-icons icon">grade</span>
       </div> -->
 
-      <mat-list-item>
-        <mat-icon mat-list-icon>dashboard</mat-icon>
+      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
         <span class="full-width" *ngIf="isExpanded || isShowing"
           >Dashboard</span
         >
+        <mat-icon mat-list-icon>dashboard</mat-icon>
+        <mat-icon> expand_more </mat-icon>
       </mat-list-item>
 
-      <mat-list-item>
-        <mat-icon mat-list-icon>point_of_sale</mat-icon>
-        <span class="full-width" *ngIf="isExpanded || isShowing">Sales</span>
-      </mat-list-item>
+      <div
+        [ngClass]="{ expanded: showSubmenu }"
+        class="menu"
+        style="position: absolute; width: -webkit-fill-available"
+        [style.transition]="'all 0.3s'"
+      >
+        <a class="full-width" mat-list-item href="...">Submenu Item 1</a>
+        <a class="full-width" mat-list-item href="...">Submenu Item 2</a>
+      </div>
 
-      <mat-list-item>
-        <mat-icon mat-list-icon>list_alt</mat-icon>
-        <span class="full-width" *ngIf="isExpanded || isShowing">Orders</span>
-      </mat-list-item>
+      <div
+        [ngStyle]="{
+          'margin-top': showSubmenu ? '90px' : '0px'
+        }"
+        [style.transition]="'all 0.4s'"
+      >
+        <mat-list-item>
+          <mat-icon mat-list-icon>point_of_sale</mat-icon>
+          <span class="full-width" *ngIf="isExpanded || isShowing">Sales</span>
+        </mat-list-item>
 
-      <mat-list-item>
-        <mat-icon mat-list-icon>support_agent </mat-icon>
-        <span class="full-width" *ngIf="isExpanded || isShowing"
-          >Customers</span
-        >
-      </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>list_alt</mat-icon>
+          <span class="full-width" *ngIf="isExpanded || isShowing">Orders</span>
+        </mat-list-item>
 
-      <mat-list-item>
-        <mat-icon mat-list-icon>category</mat-icon>
-        <span class="full-width" *ngIf="isExpanded || isShowing">Products</span>
-      </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>support_agent </mat-icon>
+          <span class="full-width" *ngIf="isExpanded || isShowing"
+            >Customers</span
+          >
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon mat-list-icon>category</mat-icon>
+          <span class="full-width" *ngIf="isExpanded || isShowing"
+            >Products</span
+          >
+        </mat-list-item>
+      </div>
 
       <!-- <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
         <span class="full-width" *ngIf="isExpanded || isShowing"
@@ -152,41 +172,8 @@
           <mat-list-item>SubSubmenu Item 1</mat-list-item>
           <mat-list-item>SubSubmenu Item 2</mat-list-item>
         </div>
-     </div> -->
+      </div> -->
     </mat-nav-list>
   </mat-sidenav>
   <app-home></app-home>
 </mat-sidenav-container>
-
-<!-- <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false"
-  >
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a *ngFor="let item of menuItems" mat-list-item [routerLink]="'/' + item">
-        {{ item | titlecase }}
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>store-admin-panel</span>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container> -->

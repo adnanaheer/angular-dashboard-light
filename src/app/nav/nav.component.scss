@@ -70,20 +70,7 @@
   border: 1px solid #ff9100;
 }
 
-// .sidenav-container {
-//   height: 100%;
-// }
-
-// .sidenav {
-//   width: 200px;
-// }
-
-// .sidenav .mat-toolbar {
-//   background: inherit;
-// }
-
-// .mat-toolbar.mat-primary {
-//   position: sticky;
-//   top: 0;
-//   z-index: 1;
-// }
+.left-menu-items {
+  margin-top: 100px;
+  transform: scaleY(1);
+}
