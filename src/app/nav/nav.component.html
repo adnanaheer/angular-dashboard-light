@@ -83,7 +83,7 @@
           >Dashboard</span
         >
         <mat-icon mat-list-icon>dashboard</mat-icon>
-        <mat-icon> expand_more </mat-icon>
+        <mat-icon *ngIf="isExpanded || isShowing"> expand_more </mat-icon>
       </mat-list-item>
 
       <div
@@ -92,8 +92,8 @@
         style="position: absolute; width: -webkit-fill-available"
         [style.transition]="'all 0.3s'"
       >
-        <a class="full-width" mat-list-item href="...">Submenu Item 1</a>
-        <a class="full-width" mat-list-item href="...">Submenu Item 2</a>
+        <a class="full-width" mat-list-item href="...">Ecommerce</a>
+        <a class="full-width" mat-list-item href="...">Analytics </a>
       </div>
 
       <div

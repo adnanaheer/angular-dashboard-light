@@ -4,36 +4,67 @@
 
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="4" rowHeight="150px">
-    <mat-grid-tile
-      *ngFor="let card of card1 | async"
-      [colspan]="card.cols"
-      [rowspan]="card.rows"
+  <div fxLayoutAlign="row wrap">
+    <mat-card
+      class="card"
+      fxLayoutAlign="row wrap"
+      fxLayoutAlign="space-between"
+      style="border-left: 5px solid rgb(0, 189, 252)"
     >
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{ card.title }}
-            <button
-              mat-icon-button
-              class="more-button"
-              [matMenuTriggerFor]="menu"
-              aria-label="Toggle menu"
-            >
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+      <div>
+        <h1 class="h11">4500</h1>
+        <h3>Total Orders</h3>
+      </div>
+      <div class="iconbg1">
+        <span class="material-icons"> shopping_cart </span>
+      </div>
+    </mat-card>
+
+    <mat-card
+      class="card"
+      fxLayoutAlign="row wrap"
+      fxLayoutAlign="space-between"
+      style="border-left: 5px solid rgb(255, 72, 102)"
+    >
+      <div>
+        <h1 class="h12">7850</h1>
+        <h3>Total Expenses</h3>
+      </div>
+      <div class="iconbg2">
+        <span class="material-icons"> payments </span>
+      </div>
+    </mat-card>
+
+    <mat-card
+      class="card"
+      fxLayoutAlign="row wrap"
+      fxLayoutAlign="space-between"
+      style="border-left: 5px solid rgb(19, 190, 19)"
+    >
+      <div>
+        <h1 class="h13">87.5%</h1>
+        <h3>Total Revenue</h3>
+      </div>
+      <div class="iconbg3">
+        <span class="material-icons"> monetization_on </span>
+      </div>
+    </mat-card>
+
+    <mat-card
+      class="card"
+      fxLayoutAlign="row wrap"
+      fxLayoutAlign="space-between"
+      style="border-left: 5px solid #ff9100"
+    >
+      <div>
+        <h1 class="h14">8400</h1>
+        <h3>New Users</h3>
+      </div>
+      <div class="iconbg4">
+        <span class="material-icons"> person </span>
+      </div>
+    </mat-card>
+  </div>
 
   <mat-grid-list cols="3" rowHeight="350px">
     <mat-grid-tile
