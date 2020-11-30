@@ -1,6 +1,5 @@
-<!-- <app-new-chart></app-new-chart>
-<app-chart-spline></app-chart-spline>
-<app-chart></app-chart>  -->
+<!-- <app-chart-spline></app-chart-spline>
+<app-chart></app-chart> -->
 
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
@@ -65,37 +64,44 @@
       </div>
     </mat-card>
   </div>
-
-  <mat-grid-list cols="3" rowHeight="350px">
-    <mat-grid-tile
-      *ngFor="let card of card2 | async"
-      [colspan]="card.cols"
-      [rowspan]="card.rows"
-    >
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{ card.title }}
-            <button
-              mat-icon-button
-              class="more-button"
-              [matMenuTriggerFor]="menu"
-              aria-label="Toggle menu"
-            >
+  <div
+    class="card2"
+    fxLayoutAlign="row wrap"
+    fxLayoutGap="20px"
+    fxLayoutAlign="space-between"
+  >
+    <mat-card style="width: 55%">
+      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
+        <h2>Product Sales</h2>
+        <div>
+          <span class="fill-remaining-space">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
               <mat-icon>more_vert</mat-icon>
             </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
+            <mat-menu #menu="matMenu" [overlapTrigger]="false">
+              <button mat-menu-item>
+                <span>Action</span>
+              </button>
+              <button mat-menu-item>
+                <span>Another action</span>
+              </button>
+              <button mat-menu-item>
+                <span>Something else here</span>
+              </button>
+              <mat-divider></mat-divider>
+              <button mat-menu-item>
+                <span>separated link</span>
+              </button>
             </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+          </span>
+        </div>
+      </div>
+      <div>
+        <app-new-chart></app-new-chart>
+      </div>
+    </mat-card>
+    <mat-card style="width: 40%">Card 6</mat-card>
+  </div>
 
   <mat-grid-list cols="3" rowHeight="350px">
     <mat-grid-tile
