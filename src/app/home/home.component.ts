@@ -8,33 +8,6 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  card3 = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 7', cols: 1, rows: 1 },
-          { title: 'Card 8', cols: 1, rows: 1 },
-          { title: 'Card 9', cols: 1, rows: 1 },
-        ];
-      }
-
-      return [
-        { title: 'Card 7', cols: 1, rows: 1 },
-        { title: 'Card 8', cols: 1, rows: 1 },
-        { title: 'Card 9', cols: 1, rows: 1 },
-      ];
-    })
-  );
-
-  card4 = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [{ title: 'Card 10', cols: 2, rows: 2 }];
-      }
-
-      return [{ title: 'Card 10', cols: 2, rows: 2 }];
-    })
-  );
 
   card5 = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
