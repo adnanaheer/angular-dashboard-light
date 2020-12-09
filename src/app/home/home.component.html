@@ -81,62 +81,16 @@
     fxLayoutGap="10px"
     fxLayoutAlign="space-between"
   >
-    <mat-card fxFlex="50%">
+    <mat-card fxFlex="55%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
         <h2>Product Sales</h2>
-        <div>
-          <span class="fill-remaining-space">
-            <button mat-icon-button [matMenuTriggerFor]="menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" [overlapTrigger]="false">
-              <button mat-menu-item>
-                <span>Action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Another action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Something else here</span>
-              </button>
-              <mat-divider></mat-divider>
-              <button mat-menu-item>
-                <span>separated link</span>
-              </button>
-            </mat-menu>
-          </span>
-        </div>
       </div>
       <div>
         <app-new-chart></app-new-chart>
       </div>
     </mat-card>
-    <mat-card fxFlex="50%">
-      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
-        <h2>Card 6</h2>
-        <div>
-          <span class="fill-remaining-space">
-            <button mat-icon-button [matMenuTriggerFor]="menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" [overlapTrigger]="false">
-              <button mat-menu-item>
-                <span>Action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Another action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Something else here</span>
-              </button>
-              <mat-divider></mat-divider>
-              <button mat-menu-item>
-                <span>separated link</span>
-              </button>
-            </mat-menu>
-          </span>
-        </div>
-      </div>
+    <mat-card fxFlex="45%">
+        <h2 fxLayoutAlign="center center">Orders Overview</h2>
       <div>
         <app-donuts-chart></app-donuts-chart>
       </div>
