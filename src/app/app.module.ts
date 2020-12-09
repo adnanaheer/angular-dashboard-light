@@ -40,6 +40,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { MatAutocompleteModuleComponent } from './mat-autocomplete-module/mat-autocomplete-module.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MatAutocompleteModuleComponent } from './mat-autocomplete-module/mat-au
     DataComponent,
     DropdownComponent,
     MatAutocompleteModuleComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,

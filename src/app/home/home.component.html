@@ -134,36 +134,40 @@
     </mat-grid-tile>
   </mat-grid-list>
 
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile
-      *ngFor="let card of card4 | async"
-      [colspan]="card.cols"
-      [rowspan]="card.rows"
-    >
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{ card.title }}
-            <button
-              mat-icon-button
-              class="more-button"
-              [matMenuTriggerFor]="menu"
-              aria-label="Toggle menu"
-            >
+  <div
+    fxLayoutAlign="row wrap"
+    fxLayoutGap="20px"
+    fxLayoutAlign="space-between"
+  >
+    <mat-card  fxFlex="100%">
+      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
+        <h2>Recent Orders
+        </h2>
+        <div>
+          <span class="fill-remaining-space">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
               <mat-icon>more_vert</mat-icon>
             </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
+            <mat-menu #menu="matMenu" [overlapTrigger]="false">
+              <button mat-menu-item>
+                <span>Expand</span>
+              </button>
+              <button mat-menu-item>
+                <span>Another action</span>
+              </button>
+              <button mat-menu-item>
+                <span>Another action</span>
+              </button>
             </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+          </span>
+        </div>
+      </div>
+      <div>
+        <app-table></app-table>
+      </div>
+    </mat-card>
+  </div>
+
 
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile
