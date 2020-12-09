@@ -1,6 +1,6 @@
 .card {
   margin: 10px;
-  height: 100px;
+  height: 120px;
   width: 300px;
 }
 .mat-h1 {
@@ -19,10 +19,9 @@
     rgb(0, 189, 252),
     rgb(126, 223, 255)
   );
-  margin: 2px;
-  padding: 15px;
+  padding: 25px;
   color: white;
-  border-radius: 60px;
+  border-radius: 50px;
 }
 .h12 {
   color: rgb(255, 72, 102);
@@ -35,10 +34,10 @@
     rgb(255, 72, 102),
     rgb(245, 128, 147)
   );
-  margin: 2px;
-  padding: 15px;
+
+  padding: 25px;
   color: white;
-  border-radius: 60px;
+  border-radius: 50px;
 }
 .h13 {
   color: rgb(19, 190, 19);
@@ -47,10 +46,9 @@
 }
 .iconbg3 {
   background-image: linear-gradient(to right, rgb(19, 190, 19), rgb(9, 110, 9));
-  margin: 2px;
-  padding: 15px;
+  padding: 25px;
   color: white;
-  border-radius: 60px;
+  border-radius: 50px;
 }
 .h14 {
   color: #ff9100;
@@ -59,19 +57,18 @@
 }
 .iconbg4 {
   background-image: linear-gradient(to right, #ff9100, #f8b863);
-  margin: 2px;
-  padding: 15px;
+  padding: 25px;
   color: white;
-  border-radius: 60px;
+  border-radius: 50px;
 }
 .material-icons {
-  font-size: 35px;
+  font-size: 40px;
 }
 .card2 {
   margin: 10px;
 }
 .grid-container {
-  margin: 20px;
+  margin: 10px;
 }
 
 .dashboard-card {
