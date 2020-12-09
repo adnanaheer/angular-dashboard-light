@@ -3,8 +3,8 @@
 
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
-  <div fxLayoutAlign="row wrap">
-    <mat-card
+  <div fxLayoutAlign="row wrap" fxFlex.xs="100%" fxFlex.sm="33%" >
+    <mat-card 
       class="card"
       fxLayoutAlign="row wrap"
       fxLayoutAlign="space-between"
@@ -65,12 +65,12 @@
     </mat-card>
   </div>
   <div
-    class="card2"
     fxLayoutAlign="row wrap"
-    fxLayoutGap="20px"
+    fxLayoutGap="10px"
     fxLayoutAlign="space-between"
+    
   >
-    <mat-card style="width: 55%">
+    <mat-card fxFlex="50%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
         <h2>Product Sales</h2>
         <div>
@@ -100,7 +100,36 @@
         <app-new-chart></app-new-chart>
       </div>
     </mat-card>
-    <mat-card style="width: 40%">Card 6</mat-card>
+    <mat-card fxFlex="50%">
+      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
+        <h2>Card 6</h2>
+        <div>
+          <span class="fill-remaining-space">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" [overlapTrigger]="false">
+              <button mat-menu-item>
+                <span>Action</span>
+              </button>
+              <button mat-menu-item>
+                <span>Another action</span>
+              </button>
+              <button mat-menu-item>
+                <span>Something else here</span>
+              </button>
+              <mat-divider></mat-divider>
+              <button mat-menu-item>
+                <span>separated link</span>
+              </button>
+            </mat-menu>
+          </span>
+        </div>
+      </div>
+      <div>
+        <app-donuts-chart></app-donuts-chart>
+      </div>
+    </mat-card>
   </div>
 
   <mat-grid-list cols="3" rowHeight="350px">
@@ -139,7 +168,7 @@
     fxLayoutGap="20px"
     fxLayoutAlign="space-between"
   >
-    <mat-card  fxFlex="100%">
+    <mat-card fxFlex="100%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
         <h2>Recent Orders
         </h2>
