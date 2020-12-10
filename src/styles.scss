@@ -2,7 +2,7 @@
 
 html,
 body {
-  height: 99vh;
+  height: 99.50vh;
   background: whitesmoke;
 }
 body {
@@ -29,4 +29,11 @@ body {
 .mat-toolbar.mat-primary {
   background: rgb(0, 0, 77);
   color: #fff;
+}
+.mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 103%;
+  overflow: auto;
 }
