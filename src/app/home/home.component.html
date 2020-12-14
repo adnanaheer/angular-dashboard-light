@@ -76,11 +76,7 @@
       </div>
     </mat-card>
   </div>
-  <div
-    fxLayoutAlign="row wrap"
-    fxLayoutGap="10px"
-    fxLayoutAlign="space-between"
-  >
+  <div fxLayoutAlign="row wrap" fxLayoutGap="20px" fxLayoutAlign="space-around">
     <mat-card fxFlex="55%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
         <h2>Sales Of The Year</h2>
@@ -90,7 +86,7 @@
       </div>
     </mat-card>
     <mat-card fxFlex="45%">
-        <h2 fxLayoutAlign="center center">Orders Overview</h2>
+      <h2 fxLayoutAlign="center center">Orders Overview</h2>
       <div>
         <app-donuts-chart></app-donuts-chart>
       </div>
@@ -98,13 +94,14 @@
   </div>
 
   <div
+  fxLayoutAlign="space-around"
     fxLayoutAlign="row wrap"
-    fxLayoutGap="10px"
     fxLayoutAlign="space-between"
   >
-    <mat-card fxFlex="33%">
+    
+    <mat-card fxFlex="33%" fxLayoutGap="20px">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
-        <h2>Card 7</h2>
+        <h2>Sales Overview</h2>
         <div>
           <span class="fill-remaining-space">
             <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -129,12 +126,12 @@
         </div>
       </div>
       <div>
-        text here
+        <app-new-chart></app-new-chart>
       </div>
     </mat-card>
     <mat-card fxFlex="33%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
-        <h2>Card 8</h2>
+        <h2>Sold by Units</h2>
         <div>
           <span class="fill-remaining-space">
             <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -158,13 +155,11 @@
           </span>
         </div>
       </div>
-      <div>
-        text here
-      </div>
+      <div>text here</div>
     </mat-card>
     <mat-card fxFlex="33%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
-        <h2>Card 9</h2>
+        <h2>Latest Notifications</h2>
         <div>
           <span class="fill-remaining-space">
             <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -188,9 +183,7 @@
           </span>
         </div>
       </div>
-      <div>
-        text here
-      </div>
+      <div>text here</div>
     </mat-card>
   </div>
   <div
