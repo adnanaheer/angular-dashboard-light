@@ -33,15 +33,12 @@ export class DonutsChartComponent implements OnInit {
     },
     series: [{
       data: [
-        
-        ['Firefox', 10.2,],
-        ['IE7', 2.6],
-        ['Chrome', 15.1],
-        ['Chrome', 3.1],
-        ['Chrome', 3.1],
-        ['Chrome', 3.1],
-        ['Chrome', 15.1],
-
+        ['Islamabad', 6.2,],
+        ['Karachi', 12.1],
+        ['Lahore', 5.6],
+        ['Faisalabad', 4.1],
+        ['Multan', 3.1],
+        ['Peshawar', 2.1],
       ]
     }]
   };

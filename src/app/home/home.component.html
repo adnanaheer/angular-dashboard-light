@@ -3,7 +3,7 @@
 
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+  <div fxLayout="row wrap" fxLayoutAlign="flex-start center" fxLayoutGap="33px">
     <mat-card
       fxFlex.lt-sm="100"
       fxFlex.sm="47"
@@ -76,6 +76,7 @@
       </div>
     </mat-card>
   </div>
+
   <div fxLayoutAlign="row wrap" fxLayoutGap="20px" fxLayoutAlign="space-around">
     <mat-card fxFlex="55%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
@@ -93,105 +94,12 @@
     </mat-card>
   </div>
 
-  <div
-  fxLayoutAlign="space-around"
-    fxLayoutAlign="row wrap"
-    fxLayoutAlign="space-between"
-  >
-    
-    <mat-card fxFlex="33%" fxLayoutGap="20px">
-      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
-        <h2>Sales Overview</h2>
-        <div>
-          <span class="fill-remaining-space">
-            <button mat-icon-button [matMenuTriggerFor]="menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" [overlapTrigger]="false">
-              <button mat-menu-item>
-                <span>Action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Another action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Something else here</span>
-              </button>
-              <mat-divider></mat-divider>
-              <button mat-menu-item>
-                <span>separated link</span>
-              </button>
-            </mat-menu>
-          </span>
-        </div>
-      </div>
-      <div>
-        <app-new-chart></app-new-chart>
-      </div>
-    </mat-card>
-    <mat-card fxFlex="33%">
-      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
-        <h2>Sold by Units</h2>
-        <div>
-          <span class="fill-remaining-space">
-            <button mat-icon-button [matMenuTriggerFor]="menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" [overlapTrigger]="false">
-              <button mat-menu-item>
-                <span>Action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Another action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Something else here</span>
-              </button>
-              <mat-divider></mat-divider>
-              <button mat-menu-item>
-                <span>separated link</span>
-              </button>
-            </mat-menu>
-          </span>
-        </div>
-      </div>
-      <div>text here</div>
-    </mat-card>
-    <mat-card fxFlex="33%">
-      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
-        <h2>Latest Notifications</h2>
-        <div>
-          <span class="fill-remaining-space">
-            <button mat-icon-button [matMenuTriggerFor]="menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" [overlapTrigger]="false">
-              <button mat-menu-item>
-                <span>Action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Another action</span>
-              </button>
-              <button mat-menu-item>
-                <span>Something else here</span>
-              </button>
-              <mat-divider></mat-divider>
-              <button mat-menu-item>
-                <span>separated link</span>
-              </button>
-            </mat-menu>
-          </span>
-        </div>
-      </div>
-      <div>text here</div>
-    </mat-card>
-  </div>
+ 
   <div
     fxLayoutAlign="row wrap"
-    fxLayoutGap="20px"
-    fxLayoutAlign="space-between"
+    fxLayoutAlign="space-between" 
   >
-    <mat-card fxFlex="100%">
+    <mat-card style="margin-top: 15px;" fxFlex="100%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
         <h2>Recent Orders</h2>
         <div>
@@ -219,36 +127,28 @@
     </mat-card>
   </div>
 
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile
-      *ngFor="let card of card5 | async"
-      [colspan]="card.cols"
-      [rowspan]="card.rows"
-    >
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{ card.title }}
-            <button
-              mat-icon-button
-              class="more-button"
-              [matMenuTriggerFor]="menu"
-              aria-label="Toggle menu"
-            >
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div style="margin-top: 15px;" fxLayoutAlign="row wrap" fxLayoutGap="20px" fxLayoutAlign="space-around">
+    <mat-card fxFlex="46%">
+      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
+        <h2>Sales Of The Year</h2>
+      </div>
+      <div>
+        <app-chart-sec></app-chart-sec>
+      </div>
+    </mat-card>
+    <mat-card fxFlex="25%">
+      <h2 fxLayoutAlign="center center">Orders Overview</h2>
+      <div>
+        <app-donuts-chart></app-donuts-chart>
+      </div>
+    </mat-card>
+    <mat-card fxFlex="25%">
+      <h2 fxLayoutAlign="center center">Orders Overview</h2>
+      <div>
+        <app-donuts-chart></app-donuts-chart>
+      </div>
+    </mat-card>
+  </div>
 
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile

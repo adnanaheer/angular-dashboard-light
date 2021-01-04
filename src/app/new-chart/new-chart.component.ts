@@ -17,6 +17,7 @@ export class NewChartComponent implements OnInit {
     {
       name: 'Aheer.com',
       data: [100, 1100, 200, 1000, 300, 900, 400, 800, 500, 700, 600, 1100],
+      color: 'orange'
     },
   ];
 

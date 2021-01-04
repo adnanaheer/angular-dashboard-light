@@ -43,6 +43,7 @@ import { MatAutocompleteModuleComponent } from './mat-autocomplete-module/mat-au
 import { TableComponent } from './table/table.component';
 import { DonutsChartComponent } from './donuts-chart/donuts-chart.component';
 import { SalesChartComponent } from './sales-chart/sales-chart.component';
+import { ChartSecComponent } from './chart-sec/chart-sec.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { SalesChartComponent } from './sales-chart/sales-chart.component';
     TableComponent,
     DonutsChartComponent,
     SalesChartComponent,
+    ChartSecComponent,
   ],
   imports: [
     BrowserModule,
