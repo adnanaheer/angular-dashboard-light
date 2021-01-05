@@ -44,6 +44,7 @@ import { TableComponent } from './table/table.component';
 import { DonutsChartComponent } from './donuts-chart/donuts-chart.component';
 import { SalesChartComponent } from './sales-chart/sales-chart.component';
 import { ChartSecComponent } from './chart-sec/chart-sec.component';
+import {PolarChartComponent} from './polar/polar-chart.component'
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { ChartSecComponent } from './chart-sec/chart-sec.component';
     DonutsChartComponent,
     SalesChartComponent,
     ChartSecComponent,
+    PolarChartComponent,
   ],
   imports: [
     BrowserModule,
