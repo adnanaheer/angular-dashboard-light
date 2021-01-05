@@ -128,7 +128,7 @@
   </div>
 
   <div style="margin-top: 15px;" fxLayoutAlign="row wrap" fxLayoutGap="20px" fxLayoutAlign="space-around">
-    <mat-card fxFlex="46%">
+    <mat-card fxFlex="60%">
       <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
         <h2>Sales Of The Year</h2>
       </div>
@@ -136,48 +136,29 @@
         <app-chart-sec></app-chart-sec>
       </div>
     </mat-card>
-    <mat-card fxFlex="25%">
+    <mat-card fxFlex="35%">
       <h2 fxLayoutAlign="center center">Orders Overview</h2>
       <div>
-        <app-donuts-chart></app-donuts-chart>
-      </div>
-    </mat-card>
-    <mat-card fxFlex="25%">
-      <h2 fxLayoutAlign="center center">Orders Overview</h2>
-      <div>
-        <app-donuts-chart></app-donuts-chart>
+        <app-polar-chart></app-polar-chart>
       </div>
     </mat-card>
   </div>
 
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile
-      *ngFor="let card of card6 | async"
-      [colspan]="card.cols"
-      [rowspan]="card.rows"
-    >
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{ card.title }}
-            <button
-              mat-icon-button
-              class="more-button"
-              [matMenuTriggerFor]="menu"
-              aria-label="Toggle menu"
-            >
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div style="margin-top: 15px;" fxLayoutAlign="row wrap" fxLayoutGap="20px" fxLayoutAlign="space-around">
+    <mat-card fxFlex="30%">
+      <div fxLayoutAlign="row wrap" fxLayoutAlign="space-between">
+        <h2>Sales Of The Year</h2>
+      </div>
+      <div>
+        <app-chart-sec></app-chart-sec>
+      </div>
+    </mat-card>
+    <mat-card fxFlex="65%">
+      <h2 fxLayoutAlign="center center">Orders Overview</h2>
+      <div>
+        <app-polar-chart></app-polar-chart>
+      </div>
+    </mat-card>
+  </div>
+
 </div>
